@@ -18,6 +18,18 @@ namespace ConsoleApp1.Models
             public string Email { get; set; } // البريد الإلكتروني
             public string Work_Shift { get; set; } // وردية العمل (صباحي/مسائي)
             public string Department { get; set; } // القسم التابع له
+
+        public void PrintDoctorInfo()
+        {
+            Console.WriteLine("===== Doctor Information =====");
+            Console.WriteLine($"Doctor ID: {Doctor_ID}");
+            Console.WriteLine($"Specialty: {Specialty}");
+            Console.WriteLine($"Department: {Department}");
+            Console.WriteLine($"Work Shift: {Work_Shift}");
+            Console.WriteLine($"Phone Number: {Phone_Number}");
+            Console.WriteLine($"Email: {Email}");
         }
+
+    }
     }
 
