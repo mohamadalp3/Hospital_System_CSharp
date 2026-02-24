@@ -18,5 +18,39 @@ namespace ConsoleApp1.Models
         public string Diagnosis { get; set; } // التشخيص
         public string Admission_Status { get; set; } // حالة الدخول (مثلاً: طوارئ، منوم)
         public int Assigned_Doctor_ID { get; set; } // رقم الطبيب المسؤول (علاقة الربط)
+
+
+        //تابع يرجع الاسم الكامل للمريض
+        public string GetFullName()
+        {
+            return $"{First_Name} {Last_Name}";
+        }
+
+        //  تابع حساب العمر
+        public int GetAge()
+        {
+            int age = DateTime.Now.Year - Date_of_Birth.Year;
+            if (DateTime.Now.DayOfYear < Date_of_Birth.DayOfYear)
+                age--;
+
+            return age;
+        }
+
+        // 3️⃣ تابع عرض معلومات المريض
+        public void PrintPatientInfo()
+        {
+            Console.WriteLine("===== Patient Information =====");
+            Console.WriteLine($"Patient ID: {Patient_ID}");
+            Console.WriteLine($"Full Name: {GetFullName()}");
+            Console.WriteLine($"Age: {GetAge()} years");
+            Console.WriteLine($"Gender: {Gender}");
+            Console.WriteLine($"Phone Number: {Phone_Number}");
+            Console.WriteLine($"Address: {Address}");
+            Console.WriteLine($"Diagnosis: {Diagnosis}");
+            Console.WriteLine($"Admission Status: {Admission_Status}");
+            Console.WriteLine($"Assigned Doctor ID: {Assigned_Doctor_ID}");
+        }
     }
 }
+    
+  
