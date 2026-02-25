@@ -17,7 +17,16 @@ namespace ConsoleApp1.Models
             public string ? AppointmentDate { get; set; } // تاريخ ووقت الموعد
             public string ? Notes { get; set; }            // ملاحظات إضافية
 
-          
+            // دالة لعرض تفاصيل الموعد
+            public void DisplayInfo()
+            {
+                Console.WriteLine($"موعد رقم: {AppointmentId}");
+                Console.WriteLine($"المريض: {PatientId}");
+                Console.WriteLine($"الطبيب: {DoctorId}");
+                Console.WriteLine($"التاريخ: {AppointmentDate}");
+                Console.WriteLine($"ملاحظات: {Notes}");
+            }
+
         }
     }
 
