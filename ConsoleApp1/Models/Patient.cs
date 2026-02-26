@@ -61,6 +61,11 @@ namespace ConsoleApp1.Models
                    $"Appointments: {PatientAppointments.Count} | " +
                    $"Prescriptions: {PatientPrescriptions.Count}";
         }
+        public int GetActivePrescriptions(int validDays)
+        {
+            return PatientPrescriptions
+                   .Count(p => !p.IsExpired(validDays));
+        }
     }
 }
     
