@@ -16,8 +16,11 @@ namespace ConsoleApp1.Models
             public string Medication { get; set; } // اسم الدواء
             public string Dosage { get; set; } // الجرعة وتعليمات الاستخدام
 
-            // تابع للتحقق مما إذا كانت الروشتة حديثة خلال عدد أيام محدد
-            public bool IsRecent(int days)
+        // ربط العلاقة الكائنية
+           public Patient Patient { get; set; }
+           public Doctor Doctor { get; set; }
+           // تابع للتحقق مما إذا كانت الروشتة حديثة خلال عدد أيام محدد
+           public bool IsRecent(int days)
             {
                 return (DateTime.Now - Date).TotalDays <= days;
             }
