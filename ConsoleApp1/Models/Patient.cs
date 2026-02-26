@@ -54,6 +54,13 @@ namespace ConsoleApp1.Models
             Console.WriteLine($"Admission Status: {Admission_Status}");
             Console.WriteLine($"Assigned Doctor ID: {Assigned_Doctor_ID}");
         }
+        public string GeneratePatientReport()
+        {
+            return $"Patient: {GetFullName()} | " +
+                   $"Age: {GetAge()} | " +
+                   $"Appointments: {PatientAppointments.Count} | " +
+                   $"Prescriptions: {PatientPrescriptions.Count}";
+        }
     }
 }
     
