@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Models
 {
-    internal class Appointments
+    public class Appointments
     {
         
         public class Appointment
@@ -17,6 +17,11 @@ namespace ConsoleApp1.Models
             public string ? AppointmentDate { get; set; } // تاريخ ووقت الموعد
             public string ? Notes { get; set; }            // ملاحظات إضافية
 
+
+
+            // ربط العلاقة الكائنية
+            public Patient Patient { get; set; }
+            public Doctor Doctor { get; set; }
             // دالة لعرض تفاصيل الموعد
             public void DisplayInfo()
             {

@@ -25,6 +25,7 @@ namespace ConsoleApp1.Models
             public List<Appointments.Appointment> DoctorAppointments { get; set; } = new List<Appointments.Appointment>();
             public List<Prescription> DoctorPrescriptions { get; set; } = new List<Prescription>();
 
+            
 
         public void PrintDoctorInfo()
         {
