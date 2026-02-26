@@ -19,6 +19,13 @@ namespace ConsoleApp1.Models
             public string Work_Shift { get; set; } // وردية العمل (صباحي/مسائي)
             public string Department { get; set; } // القسم التابع له
 
+            public List<Patient> Patients { get; set; } = new List<Patient>();// ربط العلاقة: الطبيب يشرف على قائمة من المرضى 
+
+             // ربط العلاقة: الطبيب لديه قائمة مواعيد وقائمة وصفات قام بكتابتها
+            public List<Appointments.Appointment> DoctorAppointments { get; set; } = new List<Appointments.Appointment>();
+            public List<Prescription> DoctorPrescriptions { get; set; } = new List<Prescription>();
+
+
         public void PrintDoctorInfo()
         {
             Console.WriteLine("===== Doctor Information =====");
