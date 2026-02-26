@@ -18,8 +18,12 @@ namespace ConsoleApp1.Models
         public string Diagnosis { get; set; } // التشخيص
         public string Admission_Status { get; set; } // حالة الدخول (مثلاً: طوارئ، منوم)
         public int Assigned_Doctor_ID { get; set; } // رقم الطبيب المسؤول (علاقة الربط)
+         // ربط العلاقة: المريض ينتمي لطبيب واحد
+        public Doctor AssignedDoctor { get; set; }
 
-
+        // ربط العلاقة: المريض يمكن أن يملك عدة مواعيد ووصفات
+        public List<Appointments.Appointment> PatientAppointments { get; set; } = new List<Appointments.Appointment>();
+        public List<Prescription> PatientPrescriptions { get; set; } = new List<Prescription>();
         //تابع يرجع الاسم الكامل للمريض
         public string GetFullName()
         {
