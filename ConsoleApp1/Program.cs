@@ -16,7 +16,7 @@ namespace ConsoleApp1
             Doctor doctor1 = new Doctor
             {
                 Doctor_ID = 101,
-                First_Name = "nour",
+                First_Name = "noor",
                 Last_Name = "Doe",
                 Specialty = "Cardiology",
                 Department = "Surgery",
