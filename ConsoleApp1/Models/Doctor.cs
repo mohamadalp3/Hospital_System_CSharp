@@ -45,6 +45,11 @@ namespace ConsoleApp1.Models
                    $"Prescriptions: {DoctorPrescriptions.Count}";
         }
 
+        public Patient FindPatientById(int id)
+        {
+            return Patients.FirstOrDefault(p => p.Patient_ID == id);
+        }
+
     }
     }
 
