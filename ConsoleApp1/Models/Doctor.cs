@@ -38,6 +38,14 @@ namespace ConsoleApp1.Models
             Console.WriteLine($"Email: {Email}");
         }
 
+        public string GenerateDoctorReport()
+        {
+            return $"Doctor: {First_Name} {Last_Name} | " +
+                   $"Patients: {Patients.Count} | " +
+                   $"Appointments: {DoctorAppointments.Count} | " +
+                   $"Prescriptions: {DoctorPrescriptions.Count}";
+        }
+
     }
     }
 
